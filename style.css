@@ -1,0 +1,26 @@
+/* Styling for body */
+body{
+    background-color: black;    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styling for main heading */
+h1{
+    color:gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styling for main division */
+.maindiv{
+    background-color: white;
+    color: black;    
+    width: max-content;
+    padding: 20px;
+    border-radius: 25px;
+    margin: auto;
+}
+
+.innerdiv{
+    width: fit-content;
+    margin: auto;
+}
