@@ -29,6 +29,7 @@ function compute()
     // a = (1+r/12)
     var ca = p * (Math.pow((1 + ((r/100) / Number(12))), (Number(12) * y)));
     var ci = Number(ca) - Number(p);
+    ca = ca.toFixed(2);
 
     // Computing the year after which interest will be given
     final_year = Number(n)+Number(y);
