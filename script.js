@@ -1,3 +1,6 @@
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
+}
 // Function triggered when compute interest button clicked
 function compute()
 {
@@ -29,7 +32,8 @@ function compute()
     // a = (1+r/12)
     var ca = p * (Math.pow((1 + ((r/100) / Number(12))), (Number(12) * y)));
     var ci = Number(ca) - Number(p);
-    ca = ca.toFixed(2);
+    cam = roundToTwo(ca);
+    cin = roundToTwo(ci);
 
     // Computing the year after which interest will be given
     final_year = Number(n)+Number(y);
@@ -39,7 +43,7 @@ function compute()
         document.getElementById("result").innerHTML = "If you deposit " + "<mark>" + p + "</mark>" + ",<br> at an interest rate of " + "<mark>" + r +"%" + "</mark>" + ".<br> You will receive an interest of " + "<mark>" + si + "</mark>" + ", <br>and amount of "+"<mark>"+ sa + "</mark>"+ ",<br> in the year "+ "<mark>" +final_year + "</mark>";
     }    
     else if(document.getElementById("type").value == "Compound Interest"){
-        document.getElementById("result").innerHTML = "If you deposit " + "<mark>" + p + "</mark>" + ",<br> at an interest rate of " + "<mark>" + r +"%" + "</mark>" + ".<br> You will receive an interest of " + "<mark>" + ci + "</mark>" + ", <br>and amount of "+"<mark>"+ ca + "</mark>"+ ",<br> in the year "+ "<mark>" +final_year + "</mark>";
+        document.getElementById("result").innerHTML = "If you deposit " + "<mark>" + p + "</mark>" + ",<br> at an interest rate of " + "<mark>" + r +"%" + "</mark>" + ".<br> You will receive an interest of " + "<mark>" + cin + "</mark>" + ", <br>and amount of "+"<mark>"+ cam + "</mark>"+ ",<br> in the year "+ "<mark>" +final_year + "</mark>";
     }    
 }
 
